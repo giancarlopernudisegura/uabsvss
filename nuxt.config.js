@@ -47,6 +47,19 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+	['@nuxtjs/fontawesome', {
+	  component: 'fa',
+	  imports: [
+		{
+		  set: '@fortawesome/free-solid-svg-icons',
+		  icons: ['fas']
+		},
+		{
+		  set: '@fortawesome/free-brands-svg-icons',
+		  icons: ['fab']
+		}
+      ]
+	}]
   ],
   /*
   ** Nuxt.js modules
