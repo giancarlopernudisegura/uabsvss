@@ -4,7 +4,7 @@ nav.navbar
 		a.navbar-item(href='/')
 			.crop
 				img(src='~/assets/logo.jpg')
-			h3 SVSS
+			h3="Student's Veteran Support Society"
 		a.navbar-burger(
 			role='button'
 			aria-label='menu'
@@ -19,8 +19,11 @@ nav.navbar
 			a.navbar-item(
 				v-for='link in links'
 				:key='link.text'
-				:href='link.link'
-			) {{ link.text }}
+				:href='link.href'
+			)
+				span.icon.has-text-success
+					fa(:icon="['fas', link.icon]")
+				span {{ link.text }}
 </template>
 
 <style lang="sass">
@@ -46,15 +49,18 @@ export default {
 			links: [
 			{
 				'href': '/',
-				'text': 'About us'
+				'text': 'About us',
+				'icon': 'igloo'
 			},
 			{
 				'href': '/events',
-				'text': 'Events'
+				'text': 'Events',
+				'icon': 'calendar'
 			},
 			{
 				'href': '/contact',
-				'text': 'Contact'
+				'text': 'Contact',
+				'icon': 'pen-fancy'
 			}
 			]
 		}
