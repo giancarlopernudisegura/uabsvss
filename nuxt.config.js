@@ -1,3 +1,8 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/uabsvss'
+  }
+}
 
 export default {
   /*
@@ -80,5 +85,6 @@ export default {
         }
       }
     },
-  }
+  },
+...routerBase
 }
