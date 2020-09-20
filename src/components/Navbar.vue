@@ -16,10 +16,10 @@ nav.navbar
 			span(v-for='_ in 3', aria-hidden='true')
 	.navbar-menu#navbarMenu(:class='{"is-active": active}')
 		.navbar-end
-			a.navbar-item(
+			nuxt-link.navbar-item(
 				v-for='link in links'
 				:key='link.text'
-				:href='link.href'
+				:to='link.href'
 			)
 				span.icon.has-text-success
 					fa(:icon="['fas', link.icon]")
